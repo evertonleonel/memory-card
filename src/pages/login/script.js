@@ -14,7 +14,9 @@ const validateInput = ({target}) => {
 
 const handleSubmit = (event) => {
   event.preventDefault()
-  console.log('logando')
+
+  localStorage.setItem( '@player', input.value );
+  window.location = '/src/pages/game/game.html';
 }
 
 input.addEventListener('input', validateInput);
